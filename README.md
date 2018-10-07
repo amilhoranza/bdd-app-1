@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://semaphoreci.com/api/v1/amilhoranza/bdd-app-1/branches/master/badge.svg)](https://semaphoreci.com/amilhoranza/bdd-app-1)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
