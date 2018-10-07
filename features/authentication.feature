@@ -7,8 +7,7 @@ Feature: Authentication
 Scenario: Signing up
   Given I visit the home page
   When I fill in the sign up form
-  And I confirm the email
-  Then should see that my account is confirmed
+  Then I should see welcome message
 
 Scenario: User logs in
   Given I am a registered user

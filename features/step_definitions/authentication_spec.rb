@@ -10,16 +10,10 @@ When("I fill in the sign up form") do
   click_button "Sign up"
 end
 
-When("I confirm the email") do
-  open_email("test@test.com")
-  visit_in_email("Confirm my account")
+Then("I should see welcome message") do
+  expect(page).to have_content("Welcome! You have signed up successfully.")
 end
 
-Then("should see that my account is confirmed") do
-  message = "Your email address has been successfully confirmed"
-
-  expect(page).to have_content(message)
-end
 
 Given("I am a registered user") do
   @registered_user = FactoryBot.create(
@@ -36,7 +30,7 @@ When("I fill in the login form") do
 end
 
 Then("I should be logged in") do
-  expect(page).to have_content("Logged in")
+  expect(page).to have_content("Signed in successfully.")
 end
 
 Given("I am logged in") do
@@ -53,7 +47,7 @@ Given("I visit the homepage") do
 end
 
 When("I click on the log out button") do
-  click_button "Log out"
+  click_link "Log out"
 end
 
 Then("I should be redirected to the log in page") do
